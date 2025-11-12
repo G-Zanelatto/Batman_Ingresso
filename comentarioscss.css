@@ -3,9 +3,12 @@
 * {
     margin: 0;
     padding: 0;
-    background-color: black;
     list-style: none;
     text-decoration: none;
+}
+
+body{
+    background-color: black;
 }
 
 header {
@@ -49,4 +52,277 @@ li :hover {
     background-size: cover;
     width: 100%;
     height: 600px;
+}
+
+/* Estilos para a Seção de Comentários */
+.comments-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    padding: 20px 0;
+}
+
+.comments-title {
+    color: aliceblue;
+    font-family: "Kdam Thmor Pro", serif;
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.comments-container {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 30px;
+    column-gap: 40px;
+    max-width: 1200px; /* Limite para a largura do container */
+}
+
+.comment-card {
+    background-color: #1a1a1a; /* Fundo escuro para o cartão, diferente do fundo da página */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px; /* Altura mínima para o cartão */
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.comment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(255, 0, 0, 0.3); /* Sombra com cor de destaque (vermelho) */
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid red; /* Borda de destaque */
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    font-weight: bold;
+    font-size: 18px;
+    color: aliceblue;
+    font-family: "Kdam Thmor Pro", serif;
+}
+
+.rating {
+    color: gold; /* Cor para as estrelas */
+    font-size: 18px;
+}
+
+.comment-text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Permite que o texto ocupe o espaço disponível */
+}
+
+.comment-date {
+    font-size: 12px;
+    color: #aaa;
+    text-align: right;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .comments-container {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+        width: 95%;
+    }
+
+    .comments-title {
+        font-size: 24px;
+    }
+}
+
+/* Estilos originais (mantidos para referência, mas não usados na página de comentários) */
+.actor-cards-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.cards-content {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    column-gap: 40px;
+}
+
+.card {
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 20px 10px;
+    color: #fff;
+    font-family: "Kdam Thmor Pro", sans-serif;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+footer {
+    height: 500px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+footer #logo {
+    width: 150px; /* Tamanho da logo */
+    height: auto;
+    margin-top: 20px; /* Ajuste para colocar no final */
+}
+span {
+    color: #fff;
+    font-family:"Kdam Thmor Pro", sans-serif ;
+}
+
+.footer-navigation {
+    display: none;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 5px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.nav-mobile {
+    display: none;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top: 90px; /* Posição logo abaixo do cabeçalho */
+    left: 0;
+    text-align: center;
+}
+
+.nav-mobile ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.nav-mobile li {
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    font-family: "Kdam Thmor Pro", serif;
+}
+
+.nav-mobile li:hover {
+    color: red;
+}
+
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: block;
+    }
+
+    .footer-navigation {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+    #banner {
+        background-position: 40%;
+    }
+
+    #trailer-container {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .trailer {
+        width: 100%;
+    }
+
+    #sinopse {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .description {
+        width: 100%;
+    }
+
+    .button {
+        width: 100%;
+        margin-top: 30px;
+    }
+    
+    .cards-content {
+        grid-template-columns: 1fr;
+        margin-top: 150px;
+    }
 }
